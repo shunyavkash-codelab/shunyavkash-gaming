@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import 'aos/dist/aos.css';
+
+//base
+@import 'base/defaults';
+@import 'base/fonts';
+@import 'base/mixins';
+@import 'base/settings';
+@import 'base/theme';
+
+
+//ui
+@import 'ui/header';
+@import 'ui/hero';
+@import 'ui/brand';
+@import 'ui/shop';
+@import 'ui/footer';

@@ -1,0 +1,286 @@
+.hero-section {
+    color: $white;
+
+    .hero-slider {
+        margin-bottom: 0px;
+
+        .slick-list {
+            line-height: 0;
+        }
+
+        .hero-slide {
+            position: relative;
+            height: calc(100vh - 111px);
+            width: 100%;
+
+            @include media-query('b-s') {
+                height: 630px;
+                padding-bottom: 100px;
+            }
+        }
+
+        .slick-dots {
+            bottom: 30px;
+
+            @include media-query('b-m-up') {
+                max-width: 45%;
+            }
+
+            @include media-query('b-l-up') {
+                max-width: 53%;
+            }
+
+            li {
+                button:before {
+                    content: "";
+                    border: 2px solid $white;
+                    border-radius: 100%;
+                    opacity: 1;
+                    width: 16px;
+                    height: 16px;
+                }
+
+                &.slick-active {
+                    button:before {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-banner {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-title-box,
+    .hero-content-box {
+        position: absolute;
+        right: 0;
+        background: #000000;
+        padding: 25px 40px;
+        z-index: 10;
+        width: 100%;
+        max-width: 100%;
+
+        @include media-query('b-m') {
+            padding: 25px 35px;
+        }
+
+        @include media-query('b-s') {
+            padding: 20px 25px;
+        }
+
+        @include media-query('b-m-up') {
+            max-width: 500px;
+        }
+
+        @include media-query('b-l-up') {
+            padding: 50px 70px;
+            max-width: 600px;
+        }
+
+        @include media-query('b-xl-up') {
+            max-width: 700px;
+        }
+
+        @include media-query('b-xxl-up') {
+            max-width: 800px;
+        }
+
+    }
+
+    .hero-title-box {
+        top: 0;
+
+        @include media-query('b-s') {
+            top: auto;
+            bottom: 220px;
+            background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.67) 40%, rgba(255, 255, 255, 0) 100%);
+            /* Chrome10-25,Safari5.1-6 */
+        }
+
+        span {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.20em;
+            margin-bottom: 15px;
+            display: block;
+
+            @include media-query('b-l-up') {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            @include media-query('b-xl-up') {
+                letter-spacing: 0.30em;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .hero-content-box {
+        bottom: 0;
+
+        @include media-query('b-s') {
+            padding-bottom: 80px;
+        }
+
+        @include media-query('b-l-up') {
+            padding: 50px 70px 20px;
+        }
+
+        .hero-usp {
+
+            @include media-query('b-m') {
+                margin-bottom: 20px;
+            }
+
+            @include media-query('b-l-up') {
+                font-size: 60px;
+                margin-bottom: 40px;
+            }
+
+            .hero-usp-box {
+                span {
+                    font-size: 16px;
+                    display: block;
+                    margin-bottom: 10px;
+                    line-height: 1.3;
+                    letter-spacing: 0.01em;
+
+                    @include media-query('b-s') {
+                        font-size: 12px;
+                    }
+                }
+
+                h4 {
+                    font-size: 42px;
+                    text-transform: uppercase;
+                    line-height: 1;
+                    display: block;
+
+                    @include media-query('b-s') {
+                        font-size: 28px;
+                    }
+                }
+
+                &:first-child {
+                    padding-left: 0px;
+                }
+            }
+
+            .hero-usp-box {
+                padding: 0px 20px;
+                @include media-query('b-s') {
+                    padding: 0px 15px;
+                }
+
+                &:not(:first-child) {
+                    border-left: 1px solid #ffffff;
+                }
+            }
+        }
+
+        .hero-usp-buttons {
+
+            a.squre-button {
+                text-align: center;
+                font-weight: 700;
+
+                &:first-child {
+                    margin-right: 15px;
+                }
+
+                @include media-query('b-s') {
+                    padding: 13px 20px;
+                    font-size: 18px;
+                }
+
+                @include media-query('b-l-up') {
+                    padding: 15px 30px;
+
+                    &:first-child {
+                        margin-right: 25px;
+                    }
+                }
+            }
+        }
+
+        .button-white,
+        .button-black {
+
+            &:hover,
+            &:focus {
+                background: $black;
+                color: $white;
+                border: 1px solid $white;
+            }
+        }
+    }
+}
+
+.title-xl {
+    font-size: 40px;
+    line-height: 1;
+
+    @include media-query('b-m-up') {
+        font-size: 60px;
+    }
+
+    @include media-query('b-xl-up') {
+        font-size: 90px;
+    }
+
+    @include media-query('b-xxl-up') {
+        font-size: 120px;
+    }
+}
+
+.squre-button {
+    font-size: 20px;
+    padding: 18px 30px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    transition: 0.3s all ease-in-out;
+}
+
+.button-white {
+    background: $white;
+    color: $black;
+    border: 1px solid $white;
+
+    &:hover,
+    &:focus {
+        background: $black;
+        color: $white;
+        border: 1px solid $black;
+    }
+}
+
+.button-black {
+    background: $black;
+    color: $white;
+    border: 1px solid $black;
+
+    &:hover,
+    &:focus {
+        background: $white;
+        color: $black;
+        border: 1px solid $white;
+    }
+}
+
+.black-box-space {
+    display: block;
+    width: 100%;
+    height: 180px;
+    background-color: $black;
+
+    @include media-query('b-s') {
+        display: none;
+    }
+}
